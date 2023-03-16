@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>tính chỉ số cân nặng</h2>
+    <th >nhập cân năng: (kg)</th>
+    <td>
+        <input id ="cannang" type="text" value="">
+    </td><br> <br>
+    <th >nhập chiều cao: M</th>
+    <td>
+        <input id ="chieucao" type="text" value="">
+    </td><br><br>
+    <td>
+        <input  onclick="socan()" type="button" value="kiểm tra">
+    </td>
+    <script>
+        function socan(){
+          let nang =  Number(document.getElementById('cannang').value);
+          console.log(nang);
+          let cao = Number(document.getElementById('chieucao').value); 
+          console.log(cao); 
+          let bmi = nang/(cao*2)
+          if (bmi < 18) {
+            alert ('thiếu cân');
+          }else if (bmi < 25.0){
+            alert ('bình thường');
+          }else if (bmi < 30.0){
+            alert ('thừa cân');
+          }else {
+            alert ('béo phì');
+          }
+        }
+    
+
+    </script>
+</body>
+</html>
